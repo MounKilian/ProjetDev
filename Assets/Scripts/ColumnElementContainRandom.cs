@@ -7,13 +7,14 @@ using TMPro;
 public class ColumnElementContainRandom : MonoBehaviour
 {
     [SerializeField] private GameObject[] elements;
+    [SerializeField] private Player player;
 
     void Start()
     {
         RandomElementInGrid();
     }
 
-    void RandomElementInGrid()
+    public void RandomElementInGrid()
     {
         for (int i = 0; i < 4; i++)
         {
@@ -31,13 +32,16 @@ public class ColumnElementContainRandom : MonoBehaviour
     string AssignElementInGrid(int elementChoose)
     {
         string elementName;
+        int currentLevel = player.Level + 1;
+        int fightPoint = Random.Range(0, currentLevel);
 
-        if (elementChoose >= 0 && elementChoose <= 15)
+        if (elementChoose >= 0 && elementChoose <= 15) 
         {
-            elementName = "Ennemy 1";
-        } else if (elementChoose > 15 && elementChoose <= 30)
+            elementName = "EnnemyPhysique : " + fightPoint;
+        } 
+        else if (elementChoose > 15 && elementChoose <= 30)
         {
-            elementName = "Ennemy 2";
+            elementName = "EnnemyMage : " + fightPoint;
         } else
         {
             elementName = "Coffre";
