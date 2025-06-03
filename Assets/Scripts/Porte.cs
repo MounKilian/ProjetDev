@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Porte : MonoBehaviour, IPointerClickHandler
 {
@@ -11,10 +12,12 @@ public class Porte : MonoBehaviour, IPointerClickHandler
     [SerializeField] private ColumnElementContainRandom[] columnElementContainRandom;
     [SerializeField] private Player player;
     [SerializeField] private GameObject playerText;
+    [SerializeField] private Sprite imagePorteOuverte;
+    [SerializeField] private Sprite imagePorteFerme;
 
     private void Start()
     {
-        porte.GetComponent<TextMeshProUGUI>().text = "Porte Fermé";
+        porte.GetComponent<Image>().sprite = imagePorteFerme;
 
     }
 
@@ -22,7 +25,7 @@ public class Porte : MonoBehaviour, IPointerClickHandler
     {
         if (compteurPorte >= 5)
         {
-            porte.GetComponent<TextMeshProUGUI>().text = "Porte Ouverte";
+            porte.GetComponent<Image>().sprite = imagePorteOuverte;
         }
     }
 
@@ -43,7 +46,7 @@ public class Porte : MonoBehaviour, IPointerClickHandler
 
     public void Reset()
     {
-        porte.GetComponent<TextMeshProUGUI>().text = "Porte Fermé";
+        porte.GetComponent<Image>().sprite = imagePorteFerme;
         compteurPorte = 0;
     }
 

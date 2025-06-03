@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ColumnElementContainRandom : MonoBehaviour
 {
     [SerializeField] private GameObject[] elements;
+    [SerializeField] private GameObject[] pointDmg;
     [SerializeField] private Player player;
+    [SerializeField] private Sprite ennemieForce;
+    [SerializeField] private Sprite ennemieMage;
+    [SerializeField] private Sprite coffre;
+
 
     void Start()
     {
@@ -20,33 +26,32 @@ public class ColumnElementContainRandom : MonoBehaviour
         {
             int elementIndex = i;
             int elementChoose = Random.Range(0, 100);
-            string elementChooseName = AssignElementInGrid(elementChoose);
-
-
-            TextMeshProUGUI textComponent = elements[elementIndex].GetComponent<TextMeshProUGUI>();
-            textComponent.text = elementChooseName;
+            (Sprite elementChooseName, string point) = AssignElementInGrid(elementChoose);
+            elements[elementIndex].GetComponent<Image>().sprite = elementChooseName;
+            pointDmg[elementIndex].GetComponent<TextMeshProUGUI>().text = point;
         }
 
     }
 
-    string AssignElementInGrid(int elementChoose)
+    private (Sprite, string) AssignElementInGrid(int elementChoose)
     {
-        string elementName;
+        Sprite elementName;
         int currentLevel = player.Level + 1;
         int fightPoint = Random.Range(0, currentLevel);
 
         if (elementChoose >= 0 && elementChoose <= 15) 
         {
-            elementName = "EnnemyPhysique : " + fightPoint;
+            elementName = ennemieForce;
+            return (elementName, fightPoint.ToString());
         } 
         else if (elementChoose > 15 && elementChoose <= 30)
         {
-            elementName = "EnnemyMage : " + fightPoint;
+            elementName = ennemieMage;
+            return (elementName, fightPoint.ToString());
         } else
         {
-            elementName = "Coffre";
+            elementName = coffre;
+            return (elementName, "");
         }
-
-        return elementName;
     }
 }

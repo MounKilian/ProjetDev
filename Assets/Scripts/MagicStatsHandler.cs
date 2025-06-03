@@ -15,7 +15,7 @@ public class MagicStatsHandler : MonoBehaviour, IPointerClickHandler
         {
             player.IncrementMagie();
             player.DecrementPtsAmelioration();
-            MagicStatUI.GetComponent<TextMeshProUGUI>().text = "Magie " + player.Magie;
+            MagicStatUI.GetComponent<TextMeshProUGUI>().text = player.Magie.ToString();
         }
     }
 }

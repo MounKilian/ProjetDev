@@ -6,56 +6,44 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using System.Text.RegularExpressions;
 
-public class ColumnClickHandler : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
+public class ColumnClickHandler : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField] private bool isSelected = false;
     [SerializeField] private List<GameObject> elements;
+    [SerializeField] private GameObject[] pointDmg;
 
     [SerializeField] private Image backgroundImage;
     [SerializeField] private Porte porteScript;
     [SerializeField] private GameObject playerText;
-    [SerializeField] private Player player; 
+    [SerializeField] private Player player;
+    [SerializeField] private Sprite ennemieForce;
+    [SerializeField] private Sprite ennemieMage;
+    [SerializeField] private Sprite coffre;
+    [SerializeField] private Sprite nothing;
 
     [SerializeField] private Color normalColor = Color.white;
     [SerializeField] private Color hoverColor = new Color(0.9f, 0.9f, 1f);
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        string elementPick;
+        Sprite elementPick;
         int index;
         (elementPick, index) = ElementPickRandom();
         if (elementPick != null)
         {
-            ActionEvent(elementPick);
-            RemoveElement(elementPick, index);
+            ActionEvent(elementPick, pointDmg[index].GetComponent<TextMeshProUGUI>().text);
+            RemoveElement(index);
             porteScript.IncrementCompteur();
             playerText.transform.position = elements[index].transform.position;
         }
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        if (!isSelected && backgroundImage != null)
-        {
-            backgroundImage.color = hoverColor;
-        }
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        if (!isSelected && backgroundImage != null)
-        {
-            backgroundImage.color = normalColor;
-        }
-    }
-
-    public (string, int) ElementPickRandom()
+    public (Sprite, int) ElementPickRandom()
     {
         List<int> validIndices = new List<int>();
 
         for (int i = 0; i < elements.Count; i++)
         {
-            if (elements[i].GetComponent<TextMeshProUGUI>().text != "")
+            if (elements[i].GetComponent<Image>().sprite != nothing)
             {
                 validIndices.Add(i); 
             }
@@ -64,34 +52,35 @@ public class ColumnClickHandler : MonoBehaviour, IPointerClickHandler, IPointerE
         if (validIndices.Count > 0)
         {
             int chosenIndex = validIndices[Random.Range(0, validIndices.Count)];
-            string chosenText = elements[chosenIndex].GetComponent<TextMeshProUGUI>().text;
+            Sprite chosenText = elements[chosenIndex].GetComponent<Image>().sprite;
             return (chosenText, chosenIndex);
         } else {
             return (null, 0);
         }
     }
 
-    public void RemoveElement(string elementPick, int index)
+    public void RemoveElement(int index)
     {
-        elements[index].GetComponent<TextMeshProUGUI>().text = "";
+        elements[index].GetComponent<Image>().sprite = nothing;
+        pointDmg[index].GetComponent<TextMeshProUGUI>().text = "";
     }
 
-    public void ActionEvent(string elementPick)
+    public void ActionEvent(Sprite elementPick, string point)
     {
-        if (elementPick.StartsWith("EnnemyPhysique"))
+        if (elementPick == ennemieForce)
         {
-            if (player.Force < ExtractNumber(elementPick))
+            if (player.Force < ExtractNumber(point))
             {
                 player.RemoveLife();
             }
-        } 
-        else if (elementPick.StartsWith("EnnemyMage"))
+        }
+        else if (elementPick == ennemieMage)
         {
-            if (player.Magie < ExtractNumber(elementPick))
+            if (player.Magie < ExtractNumber(point))
             {
                 player.RemoveLife();
             }
-        } 
+        }
     }
 
     public int ExtractNumber(string input)

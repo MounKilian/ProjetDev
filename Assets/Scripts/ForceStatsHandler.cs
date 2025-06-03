@@ -15,7 +15,7 @@ public class ForceStatsHandler : MonoBehaviour, IPointerClickHandler
         {
             player.IncrementForce();
             player.DecrementPtsAmelioration();
-            ForceStatUI.GetComponent<TextMeshProUGUI>().text = "Force " + player.Force;
+            ForceStatUI.GetComponent<TextMeshProUGUI>().text = player.Force.ToString();
         }
     }
 }

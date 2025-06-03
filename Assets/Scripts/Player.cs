@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int ptsAmelioration = 0;
     [SerializeField] private GameObject UIPtsAmelioration;
     [SerializeField] private GameObject UIVie;
+    [SerializeField] private GameObject UILevel;
 
     public int Level { get => level; set => level = value; }
 
@@ -61,7 +62,8 @@ public class Player : MonoBehaviour
         }
 
         UIPtsAmelioration.GetComponent<TextMeshProUGUI>().text = "Point Amélioration : " + PtsAmelioration;
-        UIVie.GetComponent<TextMeshProUGUI>().text = "Vie : " + vie;
+        UIVie.GetComponent<TextMeshProUGUI>().text = vie.ToString();
+        UILevel.GetComponent<TextMeshProUGUI>().text = level.ToString();
     }
 
 }
