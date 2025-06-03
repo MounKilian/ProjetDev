@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     [SerializeField] private int vie = 3;
     [SerializeField] private int level = 1;
     [SerializeField] private int ptsAmelioration = 0;
+    [SerializeField] private int or = 0;
     [SerializeField] private GameObject UIPtsAmelioration;
     [SerializeField] private GameObject UIVie;
     [SerializeField] private GameObject UILevel;
@@ -52,6 +53,16 @@ public class Player : MonoBehaviour
     public void RemoveLife()
     {
         vie--;
+    }
+
+    public void IncrementOr()
+    {
+        or++;
+    }
+
+    public void DecrementOr()
+    {
+        or--;
     }
 
     public void Update()

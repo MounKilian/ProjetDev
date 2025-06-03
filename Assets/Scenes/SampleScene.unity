@@ -915,7 +915,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 109.34182, w: -24.338232}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1065,7 +1065,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 108.92332, w: -26.569796}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1382,7 +1382,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 96.226265, w: -25.125782}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1555,7 +1555,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 107.1095, w: -25.125736}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1748,7 +1748,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 100.32692, w: -25.586374}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2467,6 +2467,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563198626}
   m_CullTransparentMesh: 1
+--- !u!114 &564692525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1332615383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4be9171fea06ec04781de2f1d1b878eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameObject:
+  - {fileID: 300542296}
+  - {fileID: 759170639}
+  - {fileID: 2014197804}
+  - {fileID: 1882310426}
+  nothing: {fileID: 21300000, guid: fac80f00174bce8448097213eba8cb82, type: 3}
+  open: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2650,7 +2669,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 98.04014, w: -24.836973}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3457,7 +3476,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 102.67866, w: -22.778122}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3683,7 +3702,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 104.570045, w: -23.392948}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3836,7 +3855,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 116.39689, w: -26.52243}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4502,7 +4521,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -4531,7 +4550,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 259.59338, w: 0}
+  m_margin: {x: -37.463013, y: 0, z: 251.97876, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4646,7 +4665,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 85.70579, w: -27.724985}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5233,7 +5252,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 84.980225, w: -21.660152}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -5608,7 +5627,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 105.295616, w: -29.168997}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6007,7 +6026,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 91.873024, w: -24.836973}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6141,7 +6160,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 98.76557, w: -21.948957}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6351,7 +6370,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 97.67737, w: -25.992172}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -7068,7 +7087,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7370835991913972380, guid: e83373cd424e9c34eb17dd825ba34db6, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1956272501}
+      addedObject: {fileID: 564692525}
     - targetCorrespondingSourceObject: {fileID: 8044515035816431491, guid: e83373cd424e9c34eb17dd825ba34db6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1956272500}
@@ -7258,25 +7277,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1956272501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332615383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4be9171fea06ec04781de2f1d1b878eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  GameObject:
-  - {fileID: 300542296}
-  - {fileID: 759170639}
-  - {fileID: 2014197804}
-  - {fileID: 1882310426}
-  nothing: {fileID: 21300000, guid: fac80f00174bce8448097213eba8cb82, type: 3}
-  open: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!1 &1984860047
 GameObject:
   m_ObjectHideFlags: 0
@@ -7678,7 +7678,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 23.226784, z: 152.45631, w: 0}
+  m_margin: {x: 0, y: 23.226784, z: 98.40292, w: -25.125763}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

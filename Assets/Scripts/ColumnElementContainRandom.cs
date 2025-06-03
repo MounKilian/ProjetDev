@@ -14,6 +14,14 @@ public class ColumnElementContainRandom : MonoBehaviour
     [SerializeField] private Sprite ennemieMage;
     [SerializeField] private Sprite coffre;
 
+    int GetEnemySpawnChance(int level)
+    {
+        int baseChance = 30;
+        int chancePer5Levels = (level / 5) * 5;
+
+        return Mathf.Clamp(baseChance + (chancePer5Levels / 5) * 5, 30, 80);
+    }
+
 
     void Start()
     {
@@ -35,23 +43,28 @@ public class ColumnElementContainRandom : MonoBehaviour
 
     private (Sprite, string) AssignElementInGrid(int elementChoose)
     {
-        Sprite elementName;
-        int currentLevel = player.Level + 1;
-        int fightPoint = Random.Range(0, currentLevel);
+        int level = player.Level;
+        int enemyChance = GetEnemySpawnChance(level);
+        int min = Mathf.Max(0, level - 3);
+        int fightPoint = Random.Range(min, level + 1);
 
-        if (elementChoose >= 0 && elementChoose <= 15) 
+        Sprite elementName;
+
+        if (elementChoose < enemyChance / 2)
         {
             elementName = ennemieForce;
             return (elementName, fightPoint.ToString());
-        } 
-        else if (elementChoose > 15 && elementChoose <= 30)
+        }
+        else if (elementChoose < enemyChance)
         {
             elementName = ennemieMage;
             return (elementName, fightPoint.ToString());
-        } else
+        }
+        else
         {
             elementName = coffre;
             return (elementName, "");
         }
     }
+
 }

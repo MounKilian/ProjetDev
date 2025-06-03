@@ -20,9 +20,6 @@ public class ColumnClickHandler : MonoBehaviour, IPointerClickHandler
     [SerializeField] private Sprite coffre;
     [SerializeField] private Sprite nothing;
 
-    [SerializeField] private Color normalColor = Color.white;
-    [SerializeField] private Color hoverColor = new Color(0.9f, 0.9f, 1f);
-
     public void OnPointerClick(PointerEventData eventData)
     {
         Sprite elementPick;
@@ -80,6 +77,10 @@ public class ColumnClickHandler : MonoBehaviour, IPointerClickHandler
             {
                 player.RemoveLife();
             }
+        }
+        else if (elementPick == coffre)
+        {
+            player.IncrementOr();
         }
     }
 
