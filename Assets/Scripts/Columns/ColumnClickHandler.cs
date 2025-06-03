@@ -11,7 +11,6 @@ public class ColumnClickHandler : MonoBehaviour, IPointerClickHandler
     [SerializeField] private List<GameObject> elements;
     [SerializeField] private GameObject[] pointDmg;
 
-    [SerializeField] private Image backgroundImage;
     [SerializeField] private Porte porteScript;
     [SerializeField] private GameObject playerText;
     [SerializeField] private Player player;

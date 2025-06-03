@@ -14,6 +14,8 @@ public class Porte : MonoBehaviour, IPointerClickHandler
     [SerializeField] private GameObject playerText;
     [SerializeField] private Sprite imagePorteOuverte;
     [SerializeField] private Sprite imagePorteFerme;
+    [SerializeField] private GameObject popUp;
+    [SerializeField] private GameObject game;
 
     private void Start()
     {
@@ -41,6 +43,11 @@ public class Porte : MonoBehaviour, IPointerClickHandler
             player.IncrementLevel();
             playerText.transform.position = new Vector2(1495, 29);
             player.IncrementPtsAmelioration();
+
+            if (player.Level % 10 == 0)
+            {
+                PrintPopup();
+            }
         }
     }
 
@@ -53,5 +60,19 @@ public class Porte : MonoBehaviour, IPointerClickHandler
     public void IncrementCompteur()
     {
         compteurPorte++;
+    }
+
+    public void PrintPopup()
+    {
+        popUp.SetActive(true);
+        game.GetComponent<CanvasGroup>().interactable = false;
+        game.GetComponent<CanvasGroup>().blocksRaycasts = false;
+    }
+
+    public void HidePopup()
+    {
+        popUp.SetActive(false);
+        game.GetComponent<CanvasGroup>().interactable = true;
+        game.GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
 }
