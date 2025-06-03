@@ -23,6 +23,8 @@ public class Player : MonoBehaviour
 
     public int Magie { get => magie; set => magie = value; }
 
+    public int Or { get => or; set => or = value; }
+
     public int PtsAmelioration { get => ptsAmelioration; set => ptsAmelioration = value; }
 
     public void IncrementLevel()
