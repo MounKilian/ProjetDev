@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject UIPtsAmelioration;
     [SerializeField] private GameObject UIVie;
     [SerializeField] private GameObject UILevel;
+    [SerializeField] private GameObject UIForce;
+    [SerializeField] private GameObject UIMagie;
 
     public int Level { get => level; set => level = value; }
 
@@ -62,9 +64,14 @@ public class Player : MonoBehaviour
         or++;
     }
 
-    public void DecrementOr()
+    public void IncrementLife()
     {
-        or--;
+        vie++;
+    }
+
+    public void DecrementOr(int value)
+    {
+        or = or - value;
     }
 
     public void Update()
@@ -77,6 +84,8 @@ public class Player : MonoBehaviour
         UIPtsAmelioration.GetComponent<TextMeshProUGUI>().text = "Point Amélioration : " + PtsAmelioration;
         UIVie.GetComponent<TextMeshProUGUI>().text = vie.ToString();
         UILevel.GetComponent<TextMeshProUGUI>().text = level.ToString();
+        UIMagie.GetComponent<TextMeshProUGUI>().text = magie.ToString();
+        UIForce.GetComponent<TextMeshProUGUI>().text = force.ToString();
     }
 
 }
