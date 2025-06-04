@@ -4118,7 +4118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1337981795}
   porte: {fileID: 2092986777}
-  bonus: vie
+  bonus: magie
 --- !u!1 &719233223
 GameObject:
   m_ObjectHideFlags: 0
@@ -5806,7 +5806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1337981795}
   porte: {fileID: 2092986777}
-  bonus: magie
+  bonus: vie
 --- !u!1 &1146107798
 GameObject:
   m_ObjectHideFlags: 0
@@ -7540,6 +7540,8 @@ MonoBehaviour:
   UIPtsAmelioration: {fileID: 1824778843}
   UIVie: {fileID: 1250155795}
   UILevel: {fileID: 1183196897}
+  UIForce: {fileID: 1507232139}
+  UIMagie: {fileID: 1986394865}
 --- !u!114 &1337981796
 MonoBehaviour:
   m_ObjectHideFlags: 0
